@@ -1,0 +1,62 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TX Extractor</title>
+  <style>
+    body {
+      font-family: monospace;
+      width: 600px;
+      padding: 10px;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-x: auto;
+      word-wrap: break-word;
+    }
+    div {
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+    }
+    #resetButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="resetButton">Reset</button>
+
+  <div id="configSection" style="display: none;">
+    <h2>Infura API Key Configuration</h2>
+    <div>
+      <input type="text" id="etherscanApiKeyInput" placeholder="Enter your Etherscan API Key" />
+    </div>
+    <div>
+      <input type="text" id="infuraApiKeyInput" placeholder="Enter your Infura API Key" />
+    </div>
+    <div>
+      <button id="saveApiKey">Save API Key</button>
+    </div>
+    <p id="configMessage"></p>
+  </div>
+
+  <div id="txSection" style="display: none;">
+    <h1>Transaction Hash</h1>
+    <div id="txHash">Loading...</div>
+
+    <h2>Transaction Details</h2>
+    <pre id="txDetails">Loading...</pre>
+
+    <h2>Transaction Result</h2>
+    <pre id="txResult">Loading...</pre>
+
+    <div id="bytes4Signature"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
