@@ -14,4 +14,4 @@ We keep our privacy notice under regular review and we will place any updates on
 Please contact us if you have any questions about our privacy policy by email to dongrium &lt;at&gt; gmail.com.
 
 ## History
-cf. https://github.com/dongri/tx-extractor/commits/main/store/privacy.md
+cf. https://github.com/dongri/tx-extractor/commits/main/extension/webstore/privacy.md
