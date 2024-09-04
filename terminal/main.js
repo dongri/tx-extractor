@@ -19,13 +19,21 @@ if (!ETHERSCAN_API_KEY || !INFURA_API_KEY) {
 }
 
 const url = process.argv[2];
+if (!url) {
+  console.error('Please provide transaction URL');
+  process.exit(1);
+}
+
+const txhash = url.split('/tx/')[1];
+if (!txhash) {
+  console.error('Invalid transaction URL');
+  process.exit(1);
+}
 
 const network = url.includes('sepolia') ? 'sepolia' : 'mainnet';
 
 const etherscanAPI = etherscanAPIs[network];
 const infuraAPI = infuraAPIs[network] + INFURA_API_KEY;
-
-const txhash = url.split('/tx/')[1];
 
 console.log('================================================');
 console.log(network);
